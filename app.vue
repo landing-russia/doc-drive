@@ -4,7 +4,7 @@ useHead({
     lang: "ru",
   },
   bodyAttrs: {
-    class: "bg-slate-100 font-sans",
+    class: "bg-slate-100 dark:bg-slate-800 font-sans",
   },
 })
 const { data: navigation } = await useAsyncData("navigation", () => {
@@ -13,8 +13,11 @@ const { data: navigation } = await useAsyncData("navigation", () => {
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen flex flex-col">
     <UiNavBar />
     <NuxtPage />
+    <div class="mt-auto">
+      <Footer />
+    </div>
   </div>
 </template>

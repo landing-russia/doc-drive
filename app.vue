@@ -15,6 +15,7 @@ const { data: navigation } = await useAsyncData("navigation", () => {
 <template>
   <div class="min-h-screen flex flex-col">
     <UiNavBar />
+    <!-- <pre>{{ navigation }}</pre> -->
     <NuxtPage />
     <div class="mt-auto">
       <Footer />

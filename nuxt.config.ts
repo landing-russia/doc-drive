@@ -6,7 +6,11 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/content",
   ],
-  colorMode: { classSuffix: "" },
+  colorMode: {
+    preference: "light",
+    classSuffix: "",
+    storageKey: "nuxt-color-mode",
+  },
   content: {
     documentDriven: true,
     highlight: {

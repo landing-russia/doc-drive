@@ -8,11 +8,11 @@ const setColorTheme = (newTheme: Theme) => {
 
 <template>
   <button
-    @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')"
+    @click="setColorTheme($colorMode.preference == 'dark' ? 'light' : 'dark')"
     class="rounded-full focus:outline-none focus:ring-[1px] focus:ring-offset-2 focus:ring-slate-500"
   >
     <svg
-      v-show="$colorMode.value === 'dark'"
+      v-if="$colorMode.value == 'dark'"
       xmlns="http://www.w3.org/2000/svg"
       class="h-5 w-5 text-slate-500 hover:text-slate-400"
       fill="none"
@@ -27,7 +27,7 @@ const setColorTheme = (newTheme: Theme) => {
       />
     </svg>
     <svg
-      v-show="$colorMode.value === 'light'"
+      v-else
       xmlns="http://www.w3.org/2000/svg"
       class="h-5 w-5 text-slate-500 hover:text-slate-700"
       fill="none"
@@ -41,5 +41,6 @@ const setColorTheme = (newTheme: Theme) => {
         d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
       />
     </svg>
+    {{ $colorMode.value }}
   </button>
 </template>

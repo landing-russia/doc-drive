@@ -1,4 +1,5 @@
 <script setup lang="ts">
+definePageMeta({ colorMode: "light" })
 useHead({
   htmlAttrs: {
     lang: "ru",

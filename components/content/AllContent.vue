@@ -1,14 +1,13 @@
-<script setup>
-  const { data } = await useAsyncData(() => {
-    return queryContent("/").find()
-  })
-  </script>
-  
-  <template>
+<script setup lang="ts">
+const { data } = await useAsyncData(() => {
+  return queryContent("/").find()
+})
+</script>
+
+<template>
+  <div>
     <div>
-      <div>
-        <pre>{{ data }}</pre>
-      </div>
+      <pre>{{ data }}</pre>
     </div>
-  </template>
-  
+  </div>
+</template>

@@ -17,16 +17,16 @@
           </li>
           <li>
             <NuxtLink
-              to="/"
+              to="/blog"
               class="px-4 py-2 rounded-lg font-semibold text-lg text-slate-800 hover:bg-slate-100 dark:text-slate-100 dark:hover:bg-slate-600 transition duration-150"
-              >Home</NuxtLink
+              >Blog</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
-              to="/blog"
+              to="/drafts"
               class="px-4 py-2 rounded-lg font-semibold text-lg text-slate-800 hover:bg-slate-100 dark:text-slate-100 dark:hover:bg-slate-600 transition duration-150"
-              >Blog</NuxtLink
+              >Drafts</NuxtLink
             >
           </li>
         </ul>

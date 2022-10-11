@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { data } = await useAsyncData(() => {
-  return queryContent("/blog/").find()
+  return queryContent("/blog/").sort({ date: -1 }) // show latest articles first
+  .where({ _partial: false, _path: { $ne: "/blog" } }) // exclude the Partial files
+  .find()
 })
 </script>
 

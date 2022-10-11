@@ -16,5 +16,6 @@ export default defineNuxtConfig({
     highlight: {
       theme: "material-darker",
     },
+    defaultLocale: "ru",
   },
 })

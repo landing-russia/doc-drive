@@ -8,6 +8,10 @@ html.dark {
   color-scheme: dark;
 }
 
+.prose a {
+  @apply no-underline border-b border-sky-200 dark:border-sky-800 text-sky-600 hover:text-sky-500 hover:border-sky-300 dark:hover:border-sky-700;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s;
